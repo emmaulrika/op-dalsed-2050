@@ -341,6 +341,16 @@ function exportJSON() {
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 loadPages();
+
+// Hemlig genväg: Ctrl+Shift+E aktiverar redigeringsläge
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) {
+    e.preventDefault();
+    const btn = document.getElementById('toggle-edit');
+    btn.style.display = btn.style.display === 'none' ? 'inline-block' : 'none';
+    toggleEditMode();
+  }
+});
 </script>
 </body>
 </html>
