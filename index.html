@@ -215,7 +215,7 @@ async function loadPages() {
 function buildNav() {
   const tabsEl = document.getElementById('main-tabs');
   tabsEl.innerHTML = '';
-  const order = ['start','strategi','mark','hansyn','mkb'];
+  const order = ['start','strategi','mark','hansyn','stallningstaganden','mkb'];
   order.forEach(id => {
     if (!pages[id]) return;
     const btn = document.createElement('button');
